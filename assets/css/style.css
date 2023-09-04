@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary: #88a7ca;
+  --white: #fff;
+  --gray: #f4f4f4;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Inter", sans-serif;
+}
+
+/* rest  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--secondary-font-family);
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+hr {
+  border: 0.5px solid var(--gray);
+}
+body {
+  width: 1200px;
+  margin-inline: auto;
+  margin-block: 16px;
+  background-color: var(--gray);
+}
+
+main {
+  padding-block: 32px;
+  background-color: var(--white);
+}
+
+/* utility class */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  margin-block: 8px;
+}
+
+.Header,
+.Contact,
+.Skills,
+.Experience,
+.Education,
+.Language,
+.Usefull-links {
+  margin-block: 16px;
+  padding-inline: 32px;
+}
+
+/* Header Section  */
+.Header {
+  margin-block: 0;
+  display: grid;
+  grid-template-columns: 160px auto;
+}
+.Header img {
+  border-radius: 50%;
+}
+.Header div * {
+  margin-block: 8px;
+}
+
+.Header h1 {
+  font-family: var(--primary-font-family);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.Header h2 {
+  opacity: 75%;
+  font-weight: 600;
+}
+
+/* contact  */
+.Contact {
+  background-color: var(--gray);
+}
+
+.Contact ul {
+  height: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+}
+
+.Contact ul li a {
+  color: black;
+}
+
+.Contact ul li a:hover {
+  color: cornflowerblue;
+}
+
+/* Skills */
+
+.Skills ul {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 16px;
+}
+.skill {
+  background-color: var(--primary);
+  color: var(--gray);
+  padding-inline: 8px;
+  padding-block: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.skill:hover {
+  color: black;
+  background-color: var(--gray);
+  transition: 0.9s;
+}
+
+/* Experience */
+
+.exp,
+.institute {
+  display: grid;
+  grid-template-columns: 75px auto;
+  gap: 8px;
+  margin-block: 8px;
+}
+
+.role,
+.course {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-block: 4px;
+}
+
+.org {
+  font-size: 0.9rem;
+}
+
+.timeline-location {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 4px;
+  font-size: 0.8rem;
+}
+
+/* Language */
+
+.Language ul {
+  display: grid;
+  grid-template-columns: repeat(14, auto);
+  gap: 8px;
+}
+.Language ul li {
+  background-color: var(--primary);
+  color: var(--gray);
+  padding-inline: 8px;
+  padding-block: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Language ul li:hover {
+  color: black;
+  background-color: var(--gray);
+  transition: 0.9s;
+}
+
+/* Uefull-links */
+.Usefull-links ul li {
+  margin-block: 8px;
+}
+
+/* responsive  */
+@media all and (min-width: 768px) and (max-width: 1210px) {
+  body {
+    width: auto;
+    background-color: var(--white);
+  }
+  main {
+    width: auto;
+  }
+}
+
+/* mid size mobile to min tabs */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    width: auto;
+    background-color: var(--white);
+  }
+  main {
+    width: auto;
+  }
+  .Contact ul {
+    padding: 8px;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  .Contact ul li {
+    margin-block: 8px;
+  }
+}
+
+/* mini mobile   */
+@media all and (max-width: 480px) {
+  body {
+    width: auto;
+    background-color: var(--white);
+  }
+
+  .section-title {
+    margin-block: 16px;
+  }
+
+  .Header {
+    grid-template-columns: 1fr;
+  }
+  .Header img {
+    display: none;
+  }
+  .Header p {
+    line-height: 1.8;
+  }
+
+  /* contact  */
+  .Contact ul {
+    padding: 8px;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  .Contact ul li {
+    margin-block: 8px;
+  }
+  /* skills */
+  .Skills ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
