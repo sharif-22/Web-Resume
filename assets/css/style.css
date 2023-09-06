@@ -172,11 +172,6 @@ main {
   transition: 0.9s;
 }
 
-/* Uefull-links */
-.Usefull-links ul li {
-  margin-block: 8px;
-}
-
 /* responsive  */
 @media all and (min-width: 768px) and (max-width: 1210px) {
   body {
