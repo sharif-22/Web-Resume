@@ -16,7 +16,10 @@
   margin: 0;
   font-family: var(--secondary-font-family);
 }
-
+p::selection {
+  background-color: var(--primary);
+  color: var(--gray);
+}
 li {
   list-style: none;
 }
@@ -181,6 +184,10 @@ main {
   main {
     width: auto;
   }
+  /* skills */
+  .Skills ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 /* mid size mobile to min tabs */
@@ -199,6 +206,10 @@ main {
   }
   .Contact ul li {
     margin-block: 8px;
+  }
+  /* skills */
+  .Skills ul {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
