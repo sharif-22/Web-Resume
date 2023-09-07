@@ -11,11 +11,11 @@ This Resume is built with `HTML` , `CSS` -->
 - [Internship](#internship)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+  <!-- - [Installation](#installation) -->
+  <!-- - [Usage](#usage) -->
+  <!-- - [Contributing](#contributing) -->
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
+<!-- - [Acknowledgments](#acknowledgments) -->
 
 ## Description
 
