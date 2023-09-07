@@ -42,77 +42,79 @@ main {
   background-color: var(--white);
 }
 
-/* utility class */
-.section-title {
+/* common styles of sections */
+.header,
+.contact,
+.skills,
+.experience,
+.education,
+.language {
+  margin-block: 16px;
+  padding-inline: 32px;
+}
+
+.skills__section-title,
+.experience__section-title,
+.education__section-title,
+.language__section-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: black;
   margin-block: 8px;
 }
 
-.Header,
-.Contact,
-.Skills,
-.Experience,
-.Education,
-.Language,
-.Usefull-links {
-  margin-block: 16px;
-  padding-inline: 32px;
-}
-
 /* Header Section  */
-.Header {
+.header {
   margin-block: 0;
   display: grid;
   grid-template-columns: 160px auto;
 }
-.Header img {
+.header img {
   border-radius: 50%;
 }
-.Header div * {
+.header div * {
   margin-block: 8px;
 }
 
-.Header h1 {
+.header h1 {
   font-family: var(--primary-font-family);
   font-size: 2.2rem;
   font-weight: 700;
 }
 
-.Header h2 {
+.header h2 {
   opacity: 75%;
   font-weight: 600;
 }
 
 /* contact  */
-.Contact {
+.contact {
   background-color: var(--gray);
 }
 
-.Contact ul {
+.contact ul {
   height: 34px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
 }
 
-.Contact ul li a {
+.contact ul li a {
   color: black;
 }
 
-.Contact ul li a:hover {
+.contact ul li a:hover {
   color: cornflowerblue;
 }
 
 /* Skills */
 
-.Skills ul {
+.skills ul {
   display: grid;
   grid-template-columns: repeat(10, auto);
   gap: 16px;
 }
-.skill {
+.skills__skill {
   background-color: var(--primary);
   color: var(--gray);
   padding-inline: 8px;
@@ -120,34 +122,34 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
-.skill:hover {
+.skills__skill:hover {
   color: black;
   background-color: var(--gray);
   transition: 0.9s;
 }
 
-/* Experience */
+/* Experience  And Education */
 
-.exp,
-.institute {
+.experience__exp,
+.education__institute {
   display: grid;
   grid-template-columns: 75px auto;
   gap: 8px;
   margin-block: 8px;
 }
 
-.role,
-.course {
+.experience__role,
+.education__course {
   font-size: 1rem;
   font-weight: 600;
   margin-block: 4px;
 }
 
-.org {
+.experience__org {
   font-size: 0.9rem;
 }
-
-.timeline-location {
+.education__timeline-location,
+.experience__timeline-location {
   display: flex;
   justify-content: space-between;
   margin-block: 4px;
@@ -156,12 +158,12 @@ main {
 
 /* Language */
 
-.Language ul {
+.language ul {
   display: grid;
   grid-template-columns: repeat(14, auto);
   gap: 8px;
 }
-.Language ul li {
+.language ul li {
   background-color: var(--primary);
   color: var(--gray);
   padding-inline: 8px;
@@ -169,7 +171,7 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
-.Language ul li:hover {
+.language ul li:hover {
   color: black;
   background-color: var(--gray);
   transition: 0.9s;
@@ -185,7 +187,7 @@ main {
     width: auto;
   }
   /* skills */
-  .Skills ul {
+  .skills ul {
     grid-template-columns: repeat(6, 1fr);
   }
 }
@@ -199,16 +201,16 @@ main {
   main {
     width: auto;
   }
-  .Contact ul {
+  .contact ul {
     padding: 8px;
     height: auto;
     grid-template-columns: 1fr;
   }
-  .Contact ul li {
+  .contact ul li {
     margin-block: 8px;
   }
   /* skills */
-  .Skills ul {
+  .skills ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -220,31 +222,42 @@ main {
     background-color: var(--white);
   }
 
-  .section-title {
+  main {
+    padding-block: 16px;
+  }
+
+  .skills__section-title,
+  .experience__section-title,
+  .education__section-title,
+  .language__section-title {
     margin-block: 16px;
   }
 
-  .Header {
+  .header {
     grid-template-columns: 1fr;
+    padding-block: 16px;
   }
-  .Header img {
-    display: none;
+
+  .header img {
+    margin-inline: auto;
+    margin-block: 8px;
   }
-  .Header p {
+
+  .header p {
     line-height: 1.8;
   }
 
   /* contact  */
-  .Contact ul {
-    padding: 8px;
+  .contact ul {
+    padding: 16px;
     height: auto;
     grid-template-columns: 1fr;
   }
-  .Contact ul li {
-    margin-block: 8px;
+  .contact ul li {
+    margin-block: 10px;
   }
   /* skills */
-  .Skills ul {
+  .skills ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
